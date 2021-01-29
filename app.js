@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 let datas = {};
 
-const urlDb = 'mongodb://localhost:27017';
+const urlDb = 'mongodb+srv://admin:admin@diwjs14.hyd9w.mongodb.net/test?authSource=admin&replicaSet=atlas-636i74-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
 const nameDb = 'blogito';
 const nameCollectionCom = 'coms';
 const nameCollectionUser = 'user';
