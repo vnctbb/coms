@@ -50,6 +50,7 @@ fetch('/requete-initial-com')
   });
 
 button.addEventListener('click', () => {
+  div.innerText = '';
   fetch('/requete-initial-com')
   .then(response => {
     return response.json();
