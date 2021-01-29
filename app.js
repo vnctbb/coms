@@ -34,11 +34,10 @@ app.use((req,res,next) => {
 });
 
 app.get('/', (req, res) => {
-  console.log(datas.session);
   if(req.session.username){
-    res.sendFile('/Users/Vincent/Desktop/ifocop/Ajax/exercices/exercice5/index.html');
+    res.sendFile(__dirname + '/pages/index.html');
   } else {
-    res.sendFile('/Users/Vincent/Desktop/ifocop/Ajax/exercices/exercice5/connexion.html');
+    res.sendFile(__dirname + '/pages/connexion.html');
   }
 })
 
@@ -50,7 +49,7 @@ app.post('/connexion', (req, res) => {
         req.session.username = req.body.username;
         res.redirect('/');
       } else {
-        res.sendFile('/Users/Vincent/Desktop/ifocop/Ajax/exercices/exercice5/connexion.html');
+        res.sendFile(__dirname + '/pages/connexion.html');
       }
     }) 
   })
