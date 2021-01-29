@@ -3,6 +3,8 @@ const app = express();
 const MongoClient = require('mongodb').MongoClient
 const session = require('express-session');
 
+const PORT = process.env.PORT || 3000;
+
 let datas = {};
 
 const urlDb = 'mongodb://localhost:27017';
@@ -86,6 +88,6 @@ app.post('/post-coms', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Listening on 3000');
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${ PORT }`);
 });
